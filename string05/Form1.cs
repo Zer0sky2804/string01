@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace string04
+namespace string05
 {
     public partial class Form1 : Form
     {
@@ -20,23 +20,31 @@ namespace string04
         private void button1_Click(object sender, EventArgs e)
         {
             string veta = textBox1.Text;
+            int countwords = 1;
             for(int i = 0; i < veta.Length; i++)
             {
                 char a = veta[i];
-                if (a <= 'Z' && a >= 'A')
+                if (a ==' ')
                 {
-                    veta = veta.Remove(i,1);
-                    i--;
+                    countwords++;
                 }
             }
-            label1.Text = veta;
+            label1.Text = "Pocet slov ve vete je " + countwords;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string veta = textBox1.Text;
-            veta = veta.Replace("*","");
-            label1.Text = veta;
+            string veta = textBox2.Text;
+            int countwords = 1;
+            for (int i = 0; i < veta.Length; i++)
+            {
+                char a = veta[i];
+                if(a == ' ' && veta[i + 1] <= 'z' && veta[i + 1] >= a)
+                {
+                    countwords++;
+                }
+            }
+            label2.Text = "Pocet slov ve vete je " + countwords;
         }
     }
 }
