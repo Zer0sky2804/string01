@@ -35,14 +35,14 @@ namespace string05
         private void button2_Click(object sender, EventArgs e)
         {
             string veta = textBox2.Text;
-            int countwords = 1;
-            for (int i = 0; i < veta.Length; i++)
+            int countwords = 0;
+            string[] pole = veta.Split(' ');
+            for (int i = 0; i < pole.Length; i++)
             {
-                char a = veta[i];
-                if(a == ' ' && veta[i + 1] <= 'z' && veta[i + 1] >= a)
-                {
+               if(pole[i]!="")
+               {
                     countwords++;
-                }
+               }
             }
             label2.Text = "Pocet slov ve vete je " + countwords;
         }
