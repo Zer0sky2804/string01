@@ -19,8 +19,39 @@ namespace string07
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string[] abeceda = { "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," "};
-            
+            string abeceda = "abcdefghijklmnopqrstuvwxyz ";
+            string[] morzeovka = { ".- ", "-... ", "-.-. ", "-.. ", ". ", "..-. ", "--. ", ".... ", ".. ", ".--- ", "-.- ", ".-.. ", "-- ", "-. ", "--- ", ".--. ", 
+                                    "--.- ", ".-. ", "... ", "- ", "..- ", "...- ", ".-- ", "-..- ", "-.-- ", "--.. ", "/ " };
+            string veta = textBox1.Text;
+            for(int i = 0; i < textBox1.Text.Length; i++)
+            {
+               char a = veta[i];
+                for(int p = 0; p < abeceda.Length; p++)
+                {
+                    char a2 = abeceda[p];
+                    if (a2 == a )
+                    {
+                         textBox1.Text+= morzeovka[p];
+                    }
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string abeceda = "abcdefghijklmnopqrstuvwxyz ";
+            string[] morzeovka = { ".- ", "-... ", "-.-. ", "-.. ", ". ", "..-. ", "--. ", ".... ", ".. ", ".--- ", "-.- ", ".-.. ", "-- ", "-. ", "--- ", ".--. ",
+                                    "--.- ", ".-. ", "... ", "- ", "..- ", "...- ", ".-- ", "-..- ", "-.-- ", "--.. ", "/ " };
+            string veta = textBox1.Text;
+            for (int i = 0; i < textBox1.Text.Length; i++)
+            {
+
+                for (int p = 0; p < morzeovka.Length; p++)
+                {
+
+                }
+            }
+
         }
     }
 }
