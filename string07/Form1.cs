@@ -16,13 +16,13 @@ namespace string07
         {
             InitializeComponent();
         }
-
+        string veta;
         private void button1_Click(object sender, EventArgs e)
         {
             string abeceda = "abcdefghijklmnopqrstuvwxyz ";
             string[] morzeovka = { ".- ", "-... ", "-.-. ", "-.. ", ". ", "..-. ", "--. ", ".... ", ".. ", ".--- ", "-.- ", ".-.. ", "-- ", "-. ", "--- ", ".--. ", 
                                     "--.- ", ".-. ", "... ", "- ", "..- ", "...- ", ".-- ", "-..- ", "-.-- ", "--.. ", "/ " };
-            string veta = textBox1.Text;
+             veta = textBox1.Text;
             for(int i = 0; i < textBox1.Text.Length; i++)
             {
                char a = veta[i];
@@ -31,7 +31,7 @@ namespace string07
                     char a2 = abeceda[p];
                     if (a2 == a )
                     {
-                         textBox1.Text+= morzeovka[p];
+                         textBox2.Text+= morzeovka[p];
                     }
                 }
             }
@@ -39,18 +39,8 @@ namespace string07
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string abeceda = "abcdefghijklmnopqrstuvwxyz ";
-            string[] morzeovka = { ".- ", "-... ", "-.-. ", "-.. ", ". ", "..-. ", "--. ", ".... ", ".. ", ".--- ", "-.- ", ".-.. ", "-- ", "-. ", "--- ", ".--. ",
-                                    "--.- ", ".-. ", "... ", "- ", "..- ", "...- ", ".-- ", "-..- ", "-.-- ", "--.. ", "/ " };
-            string veta = textBox1.Text;
-            for (int i = 0; i < textBox1.Text.Length; i++)
-            {
-
-                for (int p = 0; p < morzeovka.Length; p++)
-                {
-
-                }
-            }
+            veta = textBox1.Text;
+            textBox2.Text = veta;
 
         }
     }
