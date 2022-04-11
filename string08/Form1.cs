@@ -16,9 +16,11 @@ namespace string08
         {
             InitializeComponent();
         }
-
+     
         private void button1_Click(object sender, EventArgs e)
         {
+            Font medium = new Font(textBox1.Font.Name, 12);
+            Font large = new Font(textBox1.Font.Name, 20);
             string veta = textBox1.Text;
             int ps = 1;
             veta = veta.Trim();
@@ -37,6 +39,10 @@ namespace string08
                     }
                 }
                 label1.Text = "Veta obsahuje " + ps + "slov.";
+            }
+            else
+            {
+                label1.Text = "";
             }
             if(checkBox2.Checked == true)
             {
@@ -61,6 +67,10 @@ namespace string08
                 }
                 label2.Text = "Nejdelsi slovo ve vete je " + longestword;
             }
+            else
+            {
+                label2.Text = "";
+            }
             if (radioButton1.Checked == true)
             {
                 textBox1.ForeColor = Color.Black;
@@ -71,21 +81,23 @@ namespace string08
                 {
                     textBox1.ForeColor = Color.Red;
                 }
-                else
-                {
-                    if (radioButton3.Checked == true)
-                    {
-                        
-                    }
-                    else
-                    {
-                        if (radioButton4.Checked == true)
-                        {
-
-                        }
-                    }
-                }
             }
+            if (radioButton5.Checked == true)
+            {
+                textBox1.Font = medium;
+            }
+             else
+             {
+                if (radioButton6.Checked == true)
+                {
+                     textBox1.Font = large;
+                }
+             }
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }
